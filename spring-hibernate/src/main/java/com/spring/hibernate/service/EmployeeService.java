@@ -12,9 +12,9 @@ import com.spring.hibernate.repo.EmployeeRepo;
 public class EmployeeService {
 	
 	@Autowired
-	private EmployeeRepo repo;
+	private EmployeeRepo repository;
 	
 	public List<Employee> getAllEmployees() {
-		return repo.findAll();
+		return repository.findAll();
 	}
 }
