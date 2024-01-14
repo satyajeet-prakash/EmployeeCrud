@@ -1,6 +1,7 @@
 package com.spring.hibernate.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,8 +26,18 @@ public class EmployeeService implements EmployeeServiceInterface {
 	}
 
 	@Override
-	public Employee getEmployeeById(Long id) {
-		return repository.findById(id).get();
+	public Optional<Employee> getEmployeeById(Long id) {
+		return repository.findById(id);
+	}
+
+	@Override
+	public void deleteEmployeedById(Long id) {
+		repository.deleteById(id);
+	}
+
+	@Override
+	public void deleteAllEmp() {
+		repository.deleteAll();
 	}
 	
 	

@@ -17,7 +17,9 @@ public class Employee {
 	private Long id;
 	
 	private String name;
-
+	private String city;
+	private String designation;
+	
 	public String getName() {
 		return name;
 	}
@@ -32,5 +34,21 @@ public class Employee {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getDesignation() {
+		return designation;
+	}
+
+	public void setDesignation(String designation) {
+		this.designation = designation;
 	}
 }
